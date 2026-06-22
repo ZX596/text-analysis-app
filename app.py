@@ -191,7 +191,7 @@ def create_chart(chart_type, word_freq_df, top_n=20):
         treemap_data = [{"name": word, "value": freq} for word, freq in zip(words, freqs)]
         treemap = (
             TreeMap()
-            .add("词频统计", treemap_data, levels=[opts.TreeMapLevelsOpts(treemap_item_style=opts.TreeMapItemStyleOpts())])
+            .add("词频统计", treemap_data)
             .set_global_opts(
                 title_opts=opts.TitleOpts(title="词频前20矩形树图", pos_left="center"),
                 tooltip_opts=opts.TooltipOpts(formatter="{b}: {c}")
